@@ -1,0 +1,36 @@
+# Python compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Logs and debugging files
+*.log
+debug.log
+
+# Machine learning model files
+checkpoints/
+*.h5
+*.model
+
+# Data files
+*.csv
+*.dat
+*.db
+*.sqlite
+
+# Sensitive environment variables
+.env
