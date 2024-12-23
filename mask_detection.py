@@ -18,9 +18,7 @@ while True:
     ret, frame = cap.read()
     if not ret:
         break
-
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
     faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(50, 50))
 
     for (x, y, w, h) in faces:
@@ -29,12 +27,10 @@ while True:
         face = cv2.resize(face, (128, 128))
         face = img_to_array(face) / 255.0
         face = np.expand_dims(face, axis=0)
-
         prediction = model.predict(face)[0]
         label_index = np.argmax(prediction)
         label = LABELS[label_index]
         color = COLORS[label_index]
-
         cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
         cv2.putText(frame, f"{label}: {prediction[label_index] * 100:.2f}%", (x, y - 10),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.45, color, 2)
