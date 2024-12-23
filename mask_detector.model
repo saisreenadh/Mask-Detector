@@ -16,7 +16,6 @@ train_datagen = ImageDataGenerator(
     horizontal_flip=True,
     validation_split=0.2,  # Use 20% of data for validation
 )
-
 train_generator = train_datagen.flow_from_directory(
     dataset_path,
     target_size=(128, 128),
@@ -24,7 +23,6 @@ train_generator = train_datagen.flow_from_directory(
     class_mode="categorical",
     subset="training",
 )
-
 validation_generator = train_datagen.flow_from_directory(
     dataset_path,
     target_size=(128, 128),
@@ -32,7 +30,6 @@ validation_generator = train_datagen.flow_from_directory(
     class_mode="categorical",
     subset="validation",
 )
-
 # Model Architecture
 model = Sequential([
     Conv2D(32, (3, 3), activation='relu', input_shape=(128, 128, 3)),
