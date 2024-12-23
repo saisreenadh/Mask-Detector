@@ -2,7 +2,7 @@
 
 # Face Mask Detection
 
-A real-time face mask detection system using deep learning and computer vision. This application uses a webcam to detect faces and classify them as either **"Mask"** or **"No Mask"**, with a confidence percentage displayed on the screen.
+A real-time face mask detection system using deep learning and computer vision. This application uses a webcam to detect faces and classify them as either **"Mask"** or **"No Mask"**, with a confidence percentage displayed on the screen. It lights up red for no mask and green for mask.
 
 ## Features
 
