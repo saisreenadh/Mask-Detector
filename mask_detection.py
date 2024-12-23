@@ -3,7 +3,6 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
 
-
 MODEL_PATH = "mask_detector.model"
 
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
@@ -16,7 +15,7 @@ COLORS = [(0, 0, 255), (0, 255, 0)]
 cap = cv2.VideoCapture(0)
 
 while True:
-    
+
     ret, frame = cap.read()
     if not ret:
         break
